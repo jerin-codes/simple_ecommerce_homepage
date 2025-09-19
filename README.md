@@ -1,2 +1,1 @@
-# basic_ecommerce_simple_home_page
-# basic_ecommerce_simple_home_page
+# Basic responsive ecommerce homepage.

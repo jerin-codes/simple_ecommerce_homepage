@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+
 * {
   margin: 0;
   padding: 0;
@@ -104,6 +106,15 @@ button.white{
     justify-content: center;
 }
 
+#mobile{
+  display: none;
+  align-items: center;
+}
+
+#close{
+  display: none;
+}
+
 #navbar li{
     list-style: none;
     padding: 0 20px;
@@ -115,7 +126,7 @@ button.white{
     font-size: 16px;
     font-weight: 600;
     color: #1a1a1a;
-    transition:0.5 ease ;
+    transition:0.5s ;
 }
 
 
@@ -142,6 +153,7 @@ button.white{
 }
 
 
+
 /* Home page */
 #hero{
     background-image: url("img/hero4.png");
@@ -154,7 +166,6 @@ button.white{
     flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-
 }
 
 
@@ -263,7 +274,7 @@ button.white{
   border-radius: 20px;
   cursor: pointer;
   /* box-shadow: 20px 20px 30px rgba(0,0,0,0.2); */
-  transition:0/2ss;
+  transition:0.2s;
   margin: 15px 0;
   position: relative;
 
@@ -345,8 +356,6 @@ button.white{
 #banner h4{
   color:white;
   font-size: 16px;
-
-
 }
 
 #banner h2{
@@ -370,7 +379,7 @@ button.white{
 
 #sm-banner{
   display: flex;
-  
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -382,7 +391,7 @@ button.white{
   align-items: flex-start;
  
   background-image: url('img/banner/b17.jpg');
-  min-width: 800px;
+  min-width: 600px;
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -422,6 +431,7 @@ button.white{
 
 #banner3{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding: 0px 80px;
   cursor:pointer;
@@ -595,4 +605,160 @@ footer a:hover
 footer .copyright{
   width:100%;
   text-align: center;
+}
+
+
+@media(max-width:799px){
+
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: #E3e6f3;
+    height: 100vh;
+    width: 300px;
+    box-shadow:0 40px 60px rgba(0,0,0,0.1) ;
+    padding: 80px 0 0 10px;  
+    transition: 0.3s;
+}
+#navbar.active{
+  right: 0;
+}
+
+#navbar li{
+  margin-bottom:25px;
+}
+#header #mobile a{
+  text-decoration: none;
+  color: inherit;
+
+}
+
+#mobile{
+  display: flex;
+  align-items: center;
+
+}
+#mobile i{
+  color:#1a1a1a;
+  font-size: 24px;
+  padding-right:20px ;
+
+}
+
+#close{
+  display: flex;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  color: #222;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#lg-bag{
+  display: none;
+}
+
+
+#hero {
+  
+    height: 70vh;
+   padding: 0 80px;
+   background-position: top 30% right 30%;
+}
+
+#feature{
+  justify-content: center;
+
+}
+
+#feature  .feature-box{
+      margin: 15px 20px;
+}
+
+.section-p1{
+ padding: 40px 40px; 
+}
+
+#product1 .pro-container {
+   
+    justify-content: center;
+    padding-top: 20px;
+    
+  
+}
+
+#product1 .pro {
+  margin: 15px 20px;
+}
+#sm-banner{
+  padding: 8px;
+}
+
+#sm-banner .banner-box {
+ height: 23vhvh;
+ width: 100%;
+ margin-top: 10px;
+}
+
+#banner3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px 4px;
+    cursor: pointer;
+}
+#banner3 .banner1 {
+   
+    width: 100%;
+   
+}
+#news-letter .form {
+    
+    width: 59%;
+}
+}
+/* making the website mobile responsive */
+
+@media(max-width:477px){
+  #header{
+    padding:10px 13px;
+
+  }
+
+  .section-p1{
+    padding: 20px;
+  }
+  #feature {
+    justify-content: space-between;
+}
+  #feature .feature-box{
+    width: 140px;
+    margin:0 0 15px 0;
+
+  }
+  h2 {
+    font-size: 33px;
+   
+}
+
+  #hero{
+    padding: 0px 20px;
+    background-position:55%;
+  }
+  #sm-banner .banner-box {
+    height: 23vhvh;
+    min-width: 100%;
+    margin-top: 10px;
+}
+#banner3 .banner1 {
+   
+    min-width: 100%;
+   
+}
 }
